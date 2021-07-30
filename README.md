@@ -1,24 +1,25 @@
 ## API to get the estimated price of a property in Belgium
 
-Welcome to my first API that will return the predicted price of a property!
 
-Please visit https://lyesapp1.herokuapp.com/ to send your *own* data describing a real estate property (location, number of rooms, area, ...) and receive back an
+#### Welcome
+Welcome to my API that will return the estimated price of a property!
+
+Please visit https://challenge-api-lyes.herokuapp.com/predict to send your *own* data describing a real estate property (location, number of rooms, area, ...) and receive back an
 estimate of its price in euros.
 
-The data sent is processed with a machine learning model (https://github.com/Misterkadrix/challenge-regression) that is trained on real world data coming from Immoweb.com.
+Your data will be processed with a state-of-the-art machine learning model (https://github.com/Misterkadrix/challenge-regression) trained on real world data coming from Immoweb.com.
 
-Please see below for the input data to submit.
+Please see below for the input data to submit. Contact me if you need help.
 
 #### Available routes
 
 Two routes are available:
 - A route at `/` that accept a GET request and returns "alive" if the server is alive.
 - A route at `/predict` that accept:
-  - POST request that receives the data of a property in JSON format.
   - GET request returning a short description of the goal and the format.
+  - POST request that receives the data of a property in JSON format.
 
-
-### Accepted format for the POST resquest
+#### Accepted format for the POST request
 
 ```
 {
