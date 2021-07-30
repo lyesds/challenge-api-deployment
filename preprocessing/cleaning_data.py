@@ -1,15 +1,15 @@
-# import
 import pandas as pd
 import numpy as np
 
 
-def preprocess(input_filename: str):
+def preprocess(input_dict):
     """
-    Read the input data (JSON file), merge it with administrative information (city, region, province),
+    Read the input data (JSON format), merge it with administrative information (city, region, province),
     and preprocess it (missing value, categorical data).
     :return: a dataframe with one row that can be passed to the .predict method of the ML model to predict the price.
     """
-    ds = pd.read_json("data/"+input_filename+".json", orient='index')
+    # ds = pd.read_json("data/"+input_filename+".json", orient='index')
+    ds = pd.DataFrame.from_dict(input_dict, orient='index')
 
     dummy = pd.read_csv('data/dummy.csv', encoding='latin1')
     ds = pd.concat([ds, dummy], axis=0)

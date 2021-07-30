@@ -1,22 +1,19 @@
 {
-  "data": {
-    "area": int,
-    "type": "APARTMENT" | "HOUSE",
-    "room_number": int,
+  "0": {
     "location": int,
-    "land_surface": Optional[int],
-    "garden": Optional[bool],
-    "garden_area": Optional[int],
-    "kitchen_equipped": Optional[bool],
-    "full-address": Optional[str],
-    "swimming_pool": Optional[bool],
-    "furnished": Optional[bool],
-    "fireplace": Optional[bool],
-    "terrace": Optional[bool],
-    "terrace_area": Optional[int],
-    "facade_count": Optional[int],
-    "building_condition": Optional[
-      "AS_NEW" | "GOOD" | "TO RENOVATE" | "JUST RENOVATED" | "TO REBUILD" | "TO_BE_DONE_UP" | "TO_RESTORE"
-    ]
+    "type": "APARTMENT" | "HOUSE",
+    "area": int,
+    "room_number": int,
+    "kitchen_equipped": [bool],
+    "furnished": [bool],
+    "garden": [bool],
+    "garden_area": int,
+    "terrace": [bool],
+    "terrace_area": int,
+    "facade_count": int 1 | 2 | 3 | 4,
+    "swimming_pool": [bool],
+    "fireplace": [bool],
+    "land_surface": int,
+    "building_condition": "AS_NEW" | "GOOD" | "TO RENOVATE" | "JUST RENOVATED" | "TO_BE_DONE_UP" | "TO_RESTORE"
   }
 }
